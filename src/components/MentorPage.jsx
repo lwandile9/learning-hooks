@@ -5,7 +5,7 @@ const MentorProfile = ({ mentor }) => {
   return (
     <div className="container mt-5">
       <div className="row">
-        {/* Profile Picture and Basic Info */}
+        {/* Profile Picture  */}
         <div className="col-md-4 text-center">
           <img 
             src={mentor.profilePicture} 
@@ -62,7 +62,7 @@ const MentorProfile = ({ mentor }) => {
                 )}
               </ul>
 
-              {/* Additional Info */}
+              {/* title of the mentor*/}
               <p>{mentor.bio}</p>
             </div>
           </div>

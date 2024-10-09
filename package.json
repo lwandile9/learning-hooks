@@ -42,8 +42,7 @@
     "eslint-loader": "^4.0.2",
     "webpack": "^5.95.0"
   },
- "engines": {
-  "node": ">=16.x"
-}
-
+  "engines": {
+    "node": ">=16.x"
+  }
 }

@@ -1,36 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Login = () => {
-  return (
-    <div className="container">
-      <div className="row justify-content-center mt-5">
-        <div className="col-md-4">
-          <div className="card">
-            <div className="card-body">
-              <h3 className="text-center mb-4">Login</h3>
-              <form>
+const LoginForm = ({ onCancel }) => {
+    const [mentorId, setMentorId] = useState('');
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        // Here you would typically handle the login logic (e.g., API call)
+        // For now, we'll just log the mentorId and close the form
+        console.log("Logged in with Mentor ID:", mentorId);
+        onCancel(); // Call the cancel function to go back to the homepage
+    };
+
+    return (
+        <div className="container p-5">
+            <h2 className="text-center">Login to Your Account</h2>
+            <form onSubmit={handleLogin} className="mt-4">
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Email address</label>
-                  <input type="email" className="form-control" id="email" placeholder="Enter email" />
+                    <label htmlFor="mentorId" className="form-label">Mentor ID</label>
+                    <input 
+                        type="text" 
+                        id="mentorId" 
+                        className="form-control" 
+                        value={mentorId} 
+                        onChange={(e) => setMentorId(e.target.value)} 
+                        required 
+                    />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="password" className="form-label">Password</label>
-                  <input type="password" className="form-control" id="password" placeholder="Enter password" />
-                </div>
-                <div className="d-grid">
-                  <button type="submit" className="btn btn-primary">Login</button>
-                </div>
-              </form>
-              <div className="text-center mt-3">
-                <p className="small"><a href="#">Forgot your password?</a></p>
-                <p className="small">Don't have an account? <a href="#">Sign up</a></p>
-              </div>
-            </div>
-          </div>
+                <button type="submit" className="btn btn-primary">Login</button>
+                <button type="button" className="btn btn-secondary ms-3" onClick={onCancel}>
+                    Cancel
+                </button>
+            </form>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-export default Login;
+export default LoginForm;
