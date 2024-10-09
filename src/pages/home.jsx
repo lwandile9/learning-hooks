@@ -18,6 +18,7 @@ const Home = () => {
         { name: 'Milani N.', points: 850, rating: 4.8 },
         { name: 'Anathi N.', points: 820, rating: 4.7 }
     ];
+    console.log(isLoggedIn);
 
     return (
         <div className="container-fluid p-0">
