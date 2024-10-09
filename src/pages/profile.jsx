@@ -1,30 +1,31 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import { SelectUser } from '../components/selectUser';
 
-
 const Profile = () => {
-  
   const [selectedProfile, setSelectedProfile] = useState("");
+  const navigate = useNavigate(); 
 
-  
+
   const handleSelectedUser = (event) => {
-    setSelectedProfile(event.target.value);
+    const selectedValue = event.target.value;
+    setSelectedProfile(selectedValue);
+    
+   
+    navigate(`/components/${selectedValue}`);
   };
-
-
+  
   useEffect(() => {
     if (selectedProfile) {
-       alert("Profile Changed");
+      alert("Profile Changed");
     }
   }, [selectedProfile]);
 
   return (
     <div className='container'>
-      <h1 className='text-center'>User Profile</h1>
+      <h1 className='text-center'>Mentor Profile</h1>
       <hr />
-
-      <p className='p-3 fw-bold fs-3'>Please Select a user Profile below :</p>
-     
+      <p className='p-3 fw-bold fs-3'>Please Select a mentor:</p>
       <SelectUser handleSelectedUser={handleSelectedUser} />
     </div>
   );

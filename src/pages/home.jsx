@@ -1,30 +1,26 @@
 import React from 'react';
-
+import phobeBG from '../videos/phobeBG.mp4'
 const Home = ()=>{
 
 
     return (
     
-      <div className='container fs-5'>
+      <div className='container fs-5  '>
 
 
-     <div className="video-background position-relative">
-        <video class="w-100 h-100" autoplay muted loop>
-            <source src="../assets/back-vid.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-        </video>
-        <div className="content position-absolute top-50 start-50 translate-middle text-white text-center">
-            <h1>Welcome to Code Heads</h1>
-            <p>Your journey begins here.</p>
-        </div>
+<div className="video-background position-relative">
+      <video className="w-100 h-100" autoPlay muted loop>
+        <source src={phobeBG} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="content position-absolute top-50 start-50 translate-middle text-white text-center bg-secondary">
+        <h1 className='fw-bolder bg-secondary p-3 '>Welcome to Code Heads hub Loyalty program</h1>
+        <p className='fw-bold'>Your journey begins here.</p>
+      </div>
     </div>
 
-
-      <h1 className='text-center'>Welcome to Code Head Hub Loyalty program</h1> 
-     
          <p className=' mt-3'>
-
-          Welcome to the Code Heads Membership Program, your dedicated space for mentoring and community engagement. Here, we empower tech leaders like you to make a meaningful impact in the lives of aspiring learners.
+        Code Heads Membership Program, your dedicated space for mentoring and community engagement. Here, we empower tech leaders like you to make a meaningful impact in the lives of aspiring learners.
          </p>
          <p className=' mt-4'>
           <h3>Getting Started</h3>
@@ -41,16 +37,47 @@ const Home = ()=>{
         <h3>Track Your Impact</h3>
         Your profile will display your progress, including points earned and feedback from learners. This visibility not only highlights your dedication but also motivates you to continue mentoring and engaging with the community.
           </p>
+<hr></hr>
+   <section className='earning-ways '>
+   <h2 className='text-center p-3'>Ways of earning more points</h2>
+
+      <div className="content   text-white text-center ">
+      
+        <div className='row row-cols-md-2  g-2 '>
+
+        <div className="card text-white bg-primary mb-3 ">
+          <div className="card-header">Get High Rating</div>
+          <div className="card-body">
+            <p className="card-text">Earn points by maintaining a 4.5-star rating or higher for your services. Higher ratings translate to better rewards!</p>
+        </div>
+        </div>
+        <div className="card text-white bg-primary mb-3">
+          <div className="card-header">Complete schedule</div>
+          <div className="card-body">
+            <p className="card-text">Each time a mentor completes a scheduled mentorship session or live class, they can earn points</p>
+        </div>
+        </div>
+        <div className="card text-white bg-primary mb-3">
+          <div className="card-header">Encourage Student</div>
+          <div className="card-body">
+            <p className="card-text">When your mentee successfully achieves their learning goal, both you and your mentee will earn bonus points!</p>
+        </div>
+        </div>
+        <div className="card text-white bg-primary mb-3">
+          <div className="card-header">Consistency</div>
+          <div className="card-body">
+            <p className="card-text">Mentors who maintain long-term mentoring relationships (e.g., 6 months or more) can be rewarded for their commitment</p>
+        </div>
+        </div>
+   
+      
+      </div>
+    </div>
+ 
+   </section>
 
 
 
-<div className="card text-white bg-dark mb-3 text-light" >
-  <div className="card-header">Current Running  Competition</div>
-  <div className="card-body">
-    <h5 className="card-title">Nov - Dec Competition</h5>
-    <p className="card-text"> Win a asus viva book if you have 300 points</p>
-  </div>
-</div>
 
 
 

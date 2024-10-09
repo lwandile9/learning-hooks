@@ -7,7 +7,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Profile from './pages/profile';
 import Nav from './components/nav'; 
-import { LwandileBio } from './components/lwandile';
+import  MentorPage from './components/MentorPage';
 import {PageNotFound }from './pages/404'; 
 import { Footer } from './components/footer';
 
@@ -20,11 +20,11 @@ function App() {
         <Route path='/' element={<Home />} /> 
         <Route path='/home' element={<Home />} />
         <Route path='/profile' element={<Profile />} />
-        <Route path='/components/lwandile' element={<LwandileBio />} />
+        <Route path='/components/lwandile' element={<MentorPage />} />
         <Route path='/about' element={<About />} />
-
+        <Route path="/components/" element={<MentorPage />} />
       
-        {/* if no matching route, this will  show 404 page component */}
+        {/* if no matching route, this will a  show 404 page component */}
         <Route path='*' element={<PageNotFound />} /> 
       </Routes>
        <Footer/>
