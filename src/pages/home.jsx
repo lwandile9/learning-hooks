@@ -77,10 +77,6 @@ const Home = ()=>{
    </section>
 
 
-
-
-
-
  </div>
 
 
