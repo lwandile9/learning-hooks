@@ -10,25 +10,29 @@ import Nav from "./components/nav";
 import MentorPage from "./components/MentorPage";
 import { PageNotFound } from "./pages/404";
 import { Footer } from "./components/footer";
-import { LoggedHomePage } from "./pages/loggedHomePage";
+import MentorDashboard from "./pages/loggedHomePage";
+import { AuthProvider } from "./AuthContext";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Nav />
+		<AuthProvider>
+			{" "}
+			<BrowserRouter>
+				<Nav />
 
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/profile" element={<Profile />} />
-				<Route path="/components/lwandile" element={<MentorPage />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/components/" element={<MentorPage />} />
-
-				<Route path="*" element={<PageNotFound />} />
-			</Routes>
-			<Footer />
-		</BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/home" element={<Home />} />
+					<Route path="/profile" element={<Profile />} />
+					<Route path="/components/lwandile" element={<MentorPage />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/components/" element={<MentorPage />} />
+					<Route path="/loggedHomePage" element={<MentorDashboard />} />
+					<Route path="*" element={<PageNotFound />} />
+				</Routes>
+				<Footer />
+			</BrowserRouter>
+		</AuthProvider>
 	);
 }
 

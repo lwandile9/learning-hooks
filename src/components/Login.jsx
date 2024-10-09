@@ -5,10 +5,9 @@ const LoginForm = ({ onCancel }) => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // Here you would typically handle the login logic (e.g., API call)
-        // For now, we'll just log the mentorId and close the form
+        
         console.log("Logged in with Mentor ID:", mentorId);
-        onCancel(); // Call the cancel function to go back to the homepage
+        onCancel(); 
     };
 
     return (

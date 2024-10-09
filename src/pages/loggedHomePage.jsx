@@ -1,4 +1,3 @@
-import React from 'react';
 
 const MentorDashboard = ({ mentorData }) => {
     return (
@@ -34,7 +33,7 @@ const MentorDashboard = ({ mentorData }) => {
                 </div>
             </div>
 
-            {/* Recent Feedback Section */}
+           
             <section className="my-5">
                 <h2 className="text-center">Recent Feedback from Mentees</h2>
                 <div className="list-group">
@@ -52,7 +51,7 @@ const MentorDashboard = ({ mentorData }) => {
                 </div>
             </section>
 
-            {/* Rewards Section */}
+            
             <section className="my-5">
                 <h2 className="text-center">Your Rewards</h2>
                 <div className="row">
