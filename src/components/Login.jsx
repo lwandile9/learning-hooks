@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useAuth } from '../AuthContext'; 
 
 const LoginForm = ({ onCancel }) => {
-    const [mentorId, setMentorId] = useState('');
+    const { setMentorId } = useAuth(); // Use context's setter for mentorId
+    const [inputMentorId, setInputMentorId] = useState(''); // Local input state for the form
 
     const handleLogin = (e) => {
         e.preventDefault();
-        
-        console.log("Logged in with Mentor ID:", mentorId);
-        onCancel(); 
+        setMentorId(inputMentorId); // Directly set mentorId in the context
+        console.log("Logged in with Mentor ID:", inputMentorId);
+        onCancel(); // Call onCancel after successful login
     };
 
     return (
@@ -20,8 +22,8 @@ const LoginForm = ({ onCancel }) => {
                         type="text" 
                         id="mentorId" 
                         className="form-control" 
-                        value={mentorId} 
-                        onChange={(e) => setMentorId(e.target.value)} 
+                        value={inputMentorId} // Handle form input locally
+                        onChange={(e) => setInputMentorId(e.target.value)} // Update form input
                         required 
                     />
                 </div>
@@ -35,3 +37,4 @@ const LoginForm = ({ onCancel }) => {
 };
 
 export default LoginForm;
+

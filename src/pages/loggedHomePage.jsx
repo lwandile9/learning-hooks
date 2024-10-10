@@ -1,78 +1,89 @@
 
+import React from 'react';
+import { useAuth } from '../AuthContext'; // Access the context for mentorId
+ 
+
+
 const MentorDashboard = ({ mentorData }) => {
+    const { mentorId } = useAuth();
     return (
-        <div className="container my-5">
-            <h1 className="text-center">Welcome, {mentorData.name}!</h1>
-            <div className="row my-4">
-                <div className="col-md-4">
-                    <div className="card text-white bg-success mb-3">
-                        <div className="card-header">Your Points</div>
-                        <div className="card-body">
-                            <h5 className="card-title">{mentorData.points} Points</h5>
-                            <p className="card-text">Keep up the great work to earn more rewards!</p>
-                        </div>
+
+        <div className="container mt-5">
+        <div className="row">
+            {/* Welcome Banner */}
+            <div className="col-12 mb-4">
+                <div className="jumbotron bg-light p-4">
+                    <h1 className="display-4">Welcome Back, Mentor!</h1>
+                    <p className="lead">Mentor ID: {mentorId}</p>
+                    <hr className="my-4" />
+                    <p>Continue progressing in the Code Heads Loyalty Program. Here’s what you’ve achieved and what’s coming next.</p>
+                </div>
+            </div>
+
+            {/* Points and Rewards Overview */}
+            <div className="col-lg-6">
+                <div className="card mb-4">
+                    <div className="card-body">
+                        <h5>Your Points</h5>
+                        <p>You currently have <strong>1200 Points</strong></p>
+                        <hr />
+                        <h5>Next Reward</h5>
+                        <p>Free Code Heads T-shirt (Earn 2000 Points to redeem)</p>
                     </div>
                 </div>
-                <div className="col-md-4">
-                    <div className="card text-white bg-info mb-3">
-                        <div className="card-header">Your Rating</div>
-                        <div className="card-body">
-                            <h5 className="card-title">{mentorData.rating} <span className="text-warning">&#9733;</span></h5>
-                            <p className="card-text">Your current rating reflects your mentoring effectiveness.</p>
-                        </div>
+            </div>
+
+            {/* Program Status and Events */}
+            <div className="col-lg-6">
+                <div className="card mb-4">
+                    <div className="card-body">
+                        <h5>Your Program Tier</h5>
+                        <p>You are currently a <strong>Gold Member</strong></p>
+                        <hr />
+                        <h5>Upcoming Event</h5>
+                        <p>“Mentorship Masterclass” – October 20, 2024</p>
                     </div>
                 </div>
-                <div className="col-md-4">
-                    <div className="card text-white bg-danger mb-3">
-                        <div className="card-header">Upcoming Sessions</div>
-                        <div className="card-body">
-                            <h5 className="card-title">{mentorData.upcomingSessions.length} Scheduled</h5>
-                            <p className="card-text">Stay organized and prepare for your next mentoring session!</p>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="col-lg-12">
+                <div className="card mb-4">
+                    <div className="card-body">
+                        <h5>Quick Actions</h5>
+                        <hr />
+                        <div className="row">
+                            <div className="col-sm-3">
+                                <button className="btn btn-outline-success w-100 mb-2">View Rewards</button>
+                            </div>
+                            <div className="col-sm-3">
+                                <button className="btn btn-outline-info w-100 mb-2">Upcoming Events</button>
+                            </div>
+                            <div className="col-sm-3">
+                                <button className="btn btn-outline-warning w-100 mb-2">Redeem Points</button>
+                            </div>
+                            <div className="col-sm-3">
+                                <button className="btn btn-outline-danger w-100 mb-2">Contact Support</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-           
-            <section className="my-5">
-                <h2 className="text-center">Recent Feedback from Mentees</h2>
-                <div className="list-group">
-                    {mentorData.recentFeedback.length === 0 ? (
-                        <div className="list-group-item">No feedback yet!</div>
-                    ) : (
-                        mentorData.recentFeedback.map((feedback, index) => (
-                            <div key={index} className="list-group-item">
-                                <h5>{feedback.menteeName}</h5>
-                                <p>{feedback.comment}</p>
-                                <span className="text-muted">{feedback.date}</span>
-                            </div>
-                        ))
-                    )}
+            {/* Additional News or Updates */}
+            <div className="col-lg-12">
+                <div className="card mb-4">
+                    <div className="card-body">
+                        <h5>Latest News</h5>
+                        <hr />
+                        <p>Exciting new features are coming to the Code Heads Hub loyalty program. Stay tuned!</p>
+                    </div>
                 </div>
-            </section>
-
-            
-            <section className="my-5">
-                <h2 className="text-center">Your Rewards</h2>
-                <div className="row">
-                    {mentorData.rewards.length === 0 ? (
-                        <div className="text-center">You have no rewards yet. Keep mentoring to earn rewards!</div>
-                    ) : (
-                        mentorData.rewards.map((reward, index) => (
-                            <div key={index} className="col-md-4 mb-3">
-                                <div className="card text-white bg-primary">
-                                    <div className="card-header">{reward.title}</div>
-                                    <div className="card-body">
-                                        <p className="card-text">{reward.description}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    )}
-                </div>
-            </section>
+            </div>
         </div>
-    );
+    </div>
+        
+    )
 };
 
 export default MentorDashboard;

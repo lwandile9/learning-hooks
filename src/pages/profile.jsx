@@ -25,7 +25,7 @@ const Profile = () => {
     <div className='container'>
       <h1 className='text-center'>Mentor Profile</h1>
       <hr />
-      <p className='p-3 fw-bold fs-3'>Please Select a mentor:</p>
+      <p className='p-3 fw-bold fs-3'>Please Select Action:</p>
       <SelectUser handleSelectedUser={handleSelectedUser} />
     </div>
   );

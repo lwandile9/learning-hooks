@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+Code Heads Hub Loyalty Program Application
+Welcome to the Code Heads Hub Loyalty Program Application! This application is built using React and provides a platform for mentors to manage their loyalty program profile, track points earned, and understand the benefits of participation.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Introduction
+The Code Heads Hub Loyalty Program is designed to reward mentors for their contributions to the Code Heads community. This application provides a user-friendly interface for mentors to track their progress, manage their profiles, and understand the benefits of their engagement.
 
-In the project directory, you can run:
+## Why You Should Use It
+Earn Points: Engage with the community and earn points for your contributions.
+Profile Management: Easily manage your mentor profile and track your earned points.
+Community Impact: Your involvement helps shape the future of tech education for youth.
+Getting Started
+To get started with the Code Heads Hub Loyalty Program application, follow these steps:
 
-### `npm start`
+## Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+## git clone https://github.com/lwandile9/learning-hooks.git
+## cd code-heads-hub-loyalty-program
+Install the dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+## npm install
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the application:
+bash
+Copy code
+## npm start
+## Open your browser and navigate to http://localhost:3000.
 
-### `npm run build`
+## How to Use the Application
+Upon entering the application, you will land on the Home Page. Here’s what you can expect:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Introduction and Explanation:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The home page features an introduction to the application, detailing how it works and the benefits of the loyalty program.
+Login Button:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Click on the Login button in the header section to access your profile.
+You will be required to enter your Mentor ID to log in.
+Features
+Profile Overview: View your profile details and the points you have earned.
+Manage Loyalty Program Profile: Update your profile information and track your engagement.
+Point Tracking: Keep track of the points earned through your activities and contributions.
+Login
+To log in, follow these steps:
 
-### `npm run eject`
+Click the Login button on the home page.
+Enter your Mentor ID in the login form.
+Click the Submit button to access your profile.
+Profile Management
+Once logged in, you will have access to your profile page, where you can:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+View the total points earned.
+Update your profile information.
+Manage your loyalty program settings.
+Contributing
+We welcome contributions to improve the Code Heads Hub Loyalty Program application. If you have suggestions or find bugs, please create an issue or submit a pull request.
