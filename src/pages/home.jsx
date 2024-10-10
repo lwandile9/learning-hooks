@@ -31,11 +31,11 @@ const Home = () => {
                 <div className="content position-absolute top-50 start-50 translate-middle text-white text-center bg-dark bg-opacity-50 p-5 rounded-3">
                     <h1 className="fw-bolder text-uppercase">Welcome to Code Heads Loyalty Program</h1>
                     <p className="lead">Rewarding mentors for their dedication and impact.</p>
-                    <button onClick={handleLogin} className="btn btn-primary btn-lg mt-4">Log In</button>
+                    <button id="login" onClick={handleLogin} className="btn btn-primary btn-lg mt-4">Log In</button>
                 </div>
             </div>
 
-            {/* Conditionally render the Home content or Login Form */}
+            {/* tenary render the Home content or Login Form */}
             {isLoggedIn ? (
                 <LoginForm onCancel={handleCancel} />
             ) : (
@@ -57,7 +57,7 @@ const Home = () => {
                             <p className="mt-4">
                                 As a mentor, simply log in with your Mentor ID to access your profile, track your points, and see how close you are to earning rewards. Your hard work will be recognized through badges, points, and exclusive perks!
                             </p>
-                            <a href="/login" className="btn btn-light btn-lg mt-3">Log In</a>
+                            <a href="#login" className="btn btn-light btn-lg mt-3">Log In</a>
                         </div>
                     </section>
 
